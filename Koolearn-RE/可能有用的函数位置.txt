@@ -1,0 +1,33 @@
+createMuitKeys 生成解密key
+
+createMediaUrl
+
+113601 行左右验证有效时间位置
+
+VideoDownloadManager中一个结构定义
+lesson = {
+    id: this.id,
+    name: this.name,
+    productId: this.productId,
+    orderNo: this.orderNo,
+    productName: this.productName,
+    videoId: this.videoId,
+    videoSize: this.videoSize,
+    hlsType: this.hlsType,
+    nodeId: this.nodeId,
+    courseId: this.courseId,
+    isRecommend: this.isRecommend,
+    progress: this.progress,
+    state: this.state,
+    path: this.path,
+    xdf: this.xdf,
+    createtime: this.createtime,
+    keytime: this.keytime, // 应该是lastCreateDate
+    playtime: this.playtime,
+    duration: this.duration,
+    index: this.index
+},
+
+调试技巧
+F8 resume
+F10 下一函数

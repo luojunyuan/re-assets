@@ -1,0 +1,3 @@
+1. vodkey.bin 使用m3u8中的URL下下来的hls-vodkey.bin不同，并且是在点击下载后立即下载下来的。
+
+所有文件都相同 02 00 CF 8C 35 3A CB A9 2B DE D8 24 72 69 4B 39 87 3D 03 00 

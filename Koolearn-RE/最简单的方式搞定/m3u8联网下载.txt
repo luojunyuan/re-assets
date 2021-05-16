@@ -1,0 +1,19 @@
+在新东方中缓存一门课程，记录json文件到相同目录下，命名为index.json（只需要index.m3u8文件）
+缓存所有课程（此处可调整，做可动态的变化，以避免意外）（或者我直接从源码输出json？需要知道目录和文件关系关联）(这种方法最好)(为了json直接缓存所有课程是值得的)
+
+遍历循环目录（或给定指定目录，可以依靠时间来手动排序）（或缓存一门课处理一下，直接读取最新目录）
+
+
+获取当前index.m3u8与index.json文件
+
+处理index.m3u8文件另存为index_clear.m3u8，
+修改头部methods为
+#EXT-X-KEY:METHOD=AES-128（可以考虑不修改头部methos可以吗，但没必要）
+读入文件，定位到XDF-ET的下一行（或第一个INF之前），此处可以同时获取待命名的课程名
+读入json文件在下一行处加入
+#EXT-X-KEY:METHOD=AES-128,URI="base64:WFVibnMxdW1aOURJWjZqbw==" （在此处处理base64编码）
+每隔20行就增加新的一行，与json同步，做错误判断。
+最后保存处理好的index_clear.m3u8
+
+丢给N_m3u8DL-CLI运行
+N_m3u8DL-CLI_v2.9.7.exe "path_of_index.m3u8" --workDir "path_to/Downloads/koolearnToefl" --saveName "current_course_name"
